@@ -14,34 +14,47 @@ code {
 }
 
 .header {
-  background-color: blue;
+  grid-area: header;
+  background-color: rgb(80, 80, 133);
   text-align: center;
   color: blanchedalmond;
-  padding: 40px;
+    
+  
 }
 
 .home {
-  flex: 70%;
-  background-color: aqua;
-  padding: 20px;
+  grid-area: home;
+  background-color: white;
+  
+}
+
+
+
+.footer {
+  grid-area: footer;
+  text-align: center;
+  background: rgb(89, 98, 138);
+  height: 50px;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  padding: 5px;
+  
 }
 
 .chatbot {
-  flex: 30%;
+  grid-area: chatbot;
   background-color: darkgray;
-  padding: 20px;
-}
-
-.footer {
-  padding: 20px;
-  text-align: center;
-  background-color: brown;
+  height: calc(100vh - 170px);
+  
 
 }
 
 .conteudo {
-  display: flex;
-  flex-wrap: wrap;
-
+  display: grid;
+  grid-template-areas: 
+  'header header header'
+  'home home chatbot'
+  'footer footer footer';
 }
 
